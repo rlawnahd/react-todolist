@@ -47,7 +47,7 @@ const TodoappItemDeleteBtn = styled.button`
 const TodoappItemEditInput = styled.input`
   flex: 1;
   border: none;
-  border-bottom: 1px solid #f1f3f5;
+  border-bottom: 1px solid #ddd;
   padding: 5px;
   font-size: 1em;
   box-sizing: border-box;
@@ -72,6 +72,7 @@ function ToDoItem({ todoItem, todoList, setTodoList }) {
         deleted: item.id === todoItem.id ? true : item.deleted,
       }));
       setTodoList(nextTodoList);
+      console.log(nextTodoList);
     }
   };
   const onClickSubmitButton = () => {

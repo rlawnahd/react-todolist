@@ -9,7 +9,7 @@ const TodoappList = styled.div`
 `;
 const TodoappListTit = styled.p`
   font-weight: bold;
-  margin: 0;
+  margin: 0 auto;
 `;
 const TodoappListUl = styled.ul`
   list-style: none;

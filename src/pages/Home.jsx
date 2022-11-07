@@ -11,13 +11,18 @@ const HomepageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 50px 0;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 `;
 
 function Home() {
   const [todoList, setTodoList] = useState([]);
   return (
     <HomepageContainer>
-      <InputBox todoList={todoList} setTodoList={setTodoList} />
+      <InputBox
+        todoList={todoList}
+        setTodoList={setTodoList}
+        checkedList={true}
+      />
       <ToDoItemList
         title={"할 일"}
         todoList={todoList}
