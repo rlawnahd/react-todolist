@@ -16,3 +16,6 @@ code {
   text-decoration: line-through;
   color: #868e96;
 }
+* {
+  box-sizing: border-box;
+}

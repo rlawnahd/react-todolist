@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import ProgressBar from "react-bootstrap/ProgressBar";
+import ProgressBar from "./ProgressBar";
 
 const TodoappInputbox = styled.div`
   width: 100%;
@@ -27,27 +27,6 @@ const TodoappInputboxAddBtn = styled.button`
   width: 50px;
   font-weight: bold;
   cursor: pointer;
-`;
-const HprogressBar = styled.div`
-  background: #eee;
-  position: relative;
-  width: 100%;
-  height: 40px;
-  border-radius: 30px;
-  span {
-    color: blue;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    line-height: 40px;
-  }
-`;
-const HighLight = styled.div`
-  background-color: orange;
-  transition: 1s;
-  width: ${(props) => props.width};
-  height: 40px;
-  border-radius: 30px;
 `;
 
 function InputBox({ todoList, setTodoList }) {
@@ -88,6 +67,10 @@ function InputBox({ todoList, setTodoList }) {
   //   }
   // })
   // console.log(todoList.checked && );
+  let progress = (count / todoList.length) * 100;
+  const countstyle = {
+    textAlign: "end",
+  };
   return (
     <>
       <TodoappInputbox>
@@ -103,13 +86,9 @@ function InputBox({ todoList, setTodoList }) {
           추가
         </TodoappInputboxAddBtn>
       </TodoappInputbox>
-      <HprogressBar>
-        <HighLight width={parseInt((count / todoList.length) * 100) + "%"}>
-          <span>{parseInt(Math.floor((count / todoList.length) * 100))}%</span>
-        </HighLight>
-      </HprogressBar>
-      <div>
-        <span>
+      <ProgressBar progress={progress} />
+      <div style={countstyle}>
+        <span style={countstyle}>
           {count} out of {todoList.length}completed
         </span>
       </div>

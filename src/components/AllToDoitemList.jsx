@@ -2,16 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import ToDoItem from "./ToDoItem";
 
-const TodoappList = styled.div`
+const AllTodoappList = styled.div`
   margin-top: 30px;
   display: flex;
   flex-direction: column;
 `;
-const TodoappListTit = styled.p`
+const AllTodoappListTit = styled.p`
   font-weight: bold;
   margin: 0 auto;
 `;
-const TodoappListUl = styled.ul`
+const AllTodoappListUl = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -19,16 +19,15 @@ const TodoappListUl = styled.ul`
   padding: 0;
 `;
 
-function ToDoItemList({ title, todoList, setTodoList, checkedList, filter }) {
+function AllToDoitemList({ title, todoList, setTodoList, checkedList }) {
   return (
-    <TodoappList>
-      <TodoappListTit>{title}</TodoappListTit>
-      <TodoappListUl>
+    <AllTodoappList>
+      <AllTodoappListTit>{title}</AllTodoappListTit>
+      <AllTodoappListUl>
         {todoList &&
           todoList.map((todoItem) => {
             if (todoItem.deleted) return null;
-            if (checkedList !== todoItem.checked) return null;
-
+            // if (checkedList !== todoItem.checked) return null;
             return (
               <ToDoItem
                 key={todoItem.id}
@@ -38,9 +37,9 @@ function ToDoItemList({ title, todoList, setTodoList, checkedList, filter }) {
               />
             );
           })}
-      </TodoappListUl>
-    </TodoappList>
+      </AllTodoappListUl>
+    </AllTodoappList>
   );
 }
 
-export default ToDoItemList;
+export default AllToDoitemList;
