@@ -11,9 +11,13 @@ const TodoappItem = styled.li`
   &:last-child {
     margin-bottom: 0;
   }
+  input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: skyblue;
+  }
 `;
 const TodoappItemCheckbox = styled.input`
-  margin-right: 10px;
+  border-radius: 100%;
 `;
 const TodoappItemCtx = styled.span`
   flex: 1;

@@ -89,7 +89,7 @@ function InputBox({ todoList, setTodoList }) {
       <ProgressBar progress={progress} />
       <div style={countstyle}>
         <span style={countstyle}>
-          {count} out of {todoList.length}completed
+          {count} out of {todoList.length} completed
         </span>
       </div>
     </>
