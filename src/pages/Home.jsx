@@ -5,7 +5,6 @@ import styled from "styled-components";
 import AllToDoitemList from "../components/AllToDoitemList";
 import FilterButton from "../components/FilterButton";
 import "../App.css";
-import ProgressBar from "../components/ProgressBar";
 const HomepageContainer = styled.div`
   max-width: 480px;
   margin: 0 auto;

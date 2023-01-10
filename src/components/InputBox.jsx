@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
 
@@ -54,7 +54,8 @@ function InputBox({ todoList, setTodoList }) {
   //   console.log(todoList);
   // }, [todoList]);
   let count = 0;
-  todoList.map((item, index) => {
+  // eslint-disable-next-line array-callback-return
+  todoList.map((item) => {
     if (item.checked) {
       count++;
     }

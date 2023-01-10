@@ -8,7 +8,6 @@ const ProgressBar = (props) => {
     borderRadius: 50,
     margin: 0,
     transition: "0.2s",
-    margin: "auto",
     marginTop: "10px",
     marginBottom: "10px",
   };
